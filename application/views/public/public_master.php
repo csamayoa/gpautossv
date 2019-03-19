@@ -312,7 +312,7 @@ $t4x4_n = array(
 
 
                 <div class="collection">
-                    <a href="<?php echo base_url() ?>Productos/anunciate" class="collection-item black-text">
+                    <a href="<?php echo base_url() ?>cliente/login" class="collection-item black-text">
                         Anuncia tu vehiculo <i class="material-icons  secondary-content orange-text darken-3">note_add</i>
                     </a>
                     <a href="<?php echo base_url(); ?>Carro/filtro/TODOS/TODOS/AUTOMOVIL/TODOS/TODOS/TODOS/TODOS/TODOS/TODOS/0-600000/1952-2019" class="collection-item black-text">
@@ -632,7 +632,7 @@ $t4x4_n = array(
             </div>
             <div class="col l4 offset-l2 s12">
 
-                <div class="fb-page" data-href="https://www.facebook.com/gpautosprediovirtual/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/gpautosprediovirtual/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/gpautosprediovirtual/">GP Autos</a></blockquote></div>
+                <div class="fb-page" data-href="https://www.facebook.com/gpautossv/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/gpautossv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/gpautossv/">GP Autos SV</a></blockquote></div>
             </div>
         </div>
     </div>

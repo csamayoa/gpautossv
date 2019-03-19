@@ -93,7 +93,7 @@ foreach ($tipos->result() as $tipo_carro) {
 }
 
 //MARCA
-$marca_carro_select = array(
+/*$marca_carro_select = array(
     'name' => 'marca_carro',
     'id' => 'marca_carro',
     'class' => ' form-control',
@@ -102,7 +102,14 @@ $marca_carro_select = array(
 $marca_carro_select_options = array();
 foreach ($marca->result() as $marca_carro) {
     $marca_carro_select_options[$marca_carro->nombre] = $marca_carro->nombre;
-}
+}*/
+
+$marca_carro = array(
+    'name' => 'marca_carro',
+    'id' => 'marca_carro',
+    'class' => 'form-control',
+    'required' => 'required'
+);
 
 //UBICACION
 $ubicacion_carro_select = array(
@@ -773,7 +780,8 @@ $monto_pago = array(
                                         <div class="form-group">
                                             <label class="control-label">MARCA</label>
                                             <div class="controls">
-                                                <?php echo form_dropdown($marca_carro_select, $marca_carro_select_options) ?>
+                                                <?php echo form_input($marca_carro) ?>
+                                                <?php //echo form_dropdown($marca_carro_select, $marca_carro_select_options) ?>
                                             </div>
                                         </div>
                                     </div>
