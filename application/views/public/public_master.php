@@ -316,9 +316,9 @@ $t4x4_n = array(
                         Anuncia tu vehiculo <i class="material-icons  secondary-content orange-text darken-3">note_add</i>
                     </a>
                     <a href="<?php echo base_url(); ?>Carro/filtro/TODOS/TODOS/AUTOMOVIL/TODOS/TODOS/TODOS/TODOS/TODOS/TODOS/0-600000/1952-2019" class="collection-item black-text">
-                        Vehiculos <i class="material-icons  secondary-content orange-text darken-3">directions_car</i>
+                        Ver todos los vehículos <i class="material-icons  secondary-content orange-text darken-3">directions_car</i>
                     </a>
-                    <a href="<?php echo base_url() ?>Productos/financiamiento"
+                    <!--<a href="<?php echo base_url() ?>Productos/financiamiento"
                        class="collection-item black-text">
                         Financiamiento <i
                                 class="material-icons  secondary-content orange-text darken-3">aattach_money</i>
@@ -326,7 +326,7 @@ $t4x4_n = array(
                     <a href="<?php echo base_url() ?>Productos/seguros" class="collection-item black-text">
                         Seguros <i class="material-icons  secondary-content orange-text darken-3">assignment</i>
                     </a>
-                    <!--<a href="" class="collection-item black-text">
+                    <a href="" class="collection-item black-text">
                         Traspasos <i class="material-icons  secondary-content orange-text darken-3" >transform</i>
                     </a>
                     <a href="" class="collection-item black-text">
@@ -963,7 +963,17 @@ $t4x4_n = array(
         }
     });
 </script>
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ads sv -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5256997095124165"
+     data-ad-slot="3026517545"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
