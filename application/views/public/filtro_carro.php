@@ -182,17 +182,33 @@ $CI =& get_instance();
                             ?>
 
 
-                            <div class="col s12 m12">
-                                <div id="banners_busqueda" class="hoverable">
-                                    <div class="item">
-                                        <a href="<?php echo $banner->link;?>" target="_blank"
-                                           banner_busqueda_id="<?php echo $banner->id_banner?>">
-                                            <img src="<?php echo base_url().$banner->imagen;?>"
-                                                 class="responsive-img">
-                                        </a>
+                            <?php
+                            $numero = rand ('1','9');
+                            if ($numero % 2 == 0) { ?>
+                                <div class="col s12 m12">
+                                    <div id="banners_busqueda" class="hoverable">
+                                        <div class="item">
+                                            <a href="<?php echo $banner->link;?>" target="_blank"
+                                               banner_busqueda_id="<?php echo $banner->id_banner?>">
+                                                <img src="<?php echo base_url().$banner->imagen;?>"
+                                                     class="responsive-img">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php }else{ ?>
+                                <div class="col s12 m12">
+                                    <!-- Ads sv -->
+                                    <ins class="adsbygoogle"
+                                         style="display:block"
+                                         data-ad-client="ca-pub-5256997095124165"
+                                         data-ad-slot="3026517545"
+                                         data-ad-format="auto"
+                                         data-full-width-responsive="true"></ins>
+                                </div>
+                            <?php } ?>
+
+
 
                         <?php } ?>
                         <?php
@@ -272,6 +288,9 @@ $CI =& get_instance();
 
     <!-- JS personalizado -->
 <?php $this->start('js_p') ?>
+
+
+
     <script src="<?php echo base_url(); ?>ui/public/js/jquery.smoothscroll.min.js"></script>
     <script>
         //Slide to card

@@ -190,53 +190,6 @@ $t4x4_n = array(
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="google-site-verification" content="0q-W5K9CGQetDQs6wGTW2416dOQQ5byj4oGA4q11BQU"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="apple-touch-icon" sizes="57x57" href="/ui/public/images/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/ui/public/images/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/ui/public/images/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/ui/public/images/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/ui/public/images/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/ui/public/images/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/ui/public/images/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/ui/public/images/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/ui/public/images/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/ui/public/images/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/ui/public/images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/ui/public/images/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/ui/public/images/icons/favicon-16x16.png">
-    <link rel="manifest" href="/ui/public/images/icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#fb8c00">
-    <meta name="msapplication-TileImage" content="/ui/public/images/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#fb8c00">
-
-    <?php if ($this->section('title')) {
-        echo $this->section('title');
-    } ?>
-
-    <?php echo $this->section('meta'); ?>
-
-    <!-- Materialize -->
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Fonnt Awsome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!--Import boostrap.css-->
-    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>/ui/public/css/bootstrap.min.css"/>
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>ui/public/css/materialize.min.css"
-          media="screen,projection"/>
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>ui/public/css/nouislider.css"/>
-    <?php echo $this->section('css_p'); ?>
-    <link href="<?php echo base_url() ?>ui/public/css/style.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>ui/public/css/responsive.css" rel="stylesheet">
-
-</head>
 <body>
 <div id="fb-root"></div>
 <script>(function (d, s, id) {
@@ -268,9 +221,7 @@ $t4x4_n = array(
 
                     <p>
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        info@gpautos.net |
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        Lunes a Viernes 09:00 AM - 06:00 PM Sábado 09:00 AM a 01:00 PM
+                        sv@gpautos.net
                     </p>
                 </div>
                 <div class="col m4">
@@ -295,8 +246,7 @@ $t4x4_n = array(
                     ?>
                 </div>
                 <div class="col m2">
-                    <p class="text-right"><i class="fa fa-phone"></i>
-                        (+502) 2294-5656
+                    <p class="text-right">
                         <a href="https://www.facebook.com/gpautosprediovirtual/" target="_blank"><i
                                     class="fa fa-facebook-official fa-2x"></i></a>
                     </p>
@@ -332,6 +282,9 @@ $t4x4_n = array(
                     <a href="" class="collection-item black-text">
                         Franquicia <i class="material-icons  secondary-content orange-text darken-3" >account_balance</i>
                     </a>-->
+                    <a href="<?php echo base_url() ?>formularios/franquicias" class="collection-item black-text">
+                        Franquicia  <i class="material-icons  secondary-content orange-text darken-3">email</i>
+                    </a>
                     <a href="<?php echo base_url() ?>Contacto" class="collection-item black-text">
                         Contacto <i class="material-icons  secondary-content orange-text darken-3">email</i>
                     </a>
@@ -346,55 +299,60 @@ $t4x4_n = array(
             </div>
             <div class="col s12 m8">
                 <section id="banner">
+                    <?php
+                    $numero = rand ('1','9');
+                    if ($numero % 2 == 0) { ?>
+                        <?php if (isset($header_banners)) { ?>
+                            <div id="header_banners" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                </ol>-->
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <?php
+                                    $start_banner = 0;
+                                    foreach ($header_banners->result() as $banner) { ?>
+                                        <div class="item <?php if ($start_banner < 1) {
+                                            echo 'active';
+                                        } ?> ">
+                                            <a href="<?php echo $banner->link_bh ?>" target="_blank"
+                                               banner_id="<?php echo $banner->id_bh; ?>">
+                                                <img src="<?php echo base_url() . $banner->imagen_bh ?>">
+                                            </a>
+                                        </div>
 
-                    <?php if (isset($header_banners)) { ?>
-                        <div id="header_banners" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators
-							<ol class="carousel-indicators">
-								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-							</ol>-->
+                                        <?php $start_banner++ ?>
 
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner" role="listbox">
+                                    <?php } ?>
+                                </div>
 
-                                <?php
-                                $start_banner = 0;
-                                foreach ($header_banners->result() as $banner) { ?>
-
-
-                                    <div class="item <?php if ($start_banner < 1) {
-                                        echo 'active';
-                                    } ?> ">
-                                        <a href="<?php echo $banner->link_bh ?>" target="_blank"
-                                           banner_id="<?php echo $banner->id_bh; ?>">
-                                            <img src="<?php echo base_url() . $banner->imagen_bh ?>">
-                                        </a>
-                                    </div>
-
-                                    <?php $start_banner++ ?>
-
-
-                                <?php } ?>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#header_banners" role="button"
+                                   data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#header_banners" role="button"
+                                   data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-
-                            <!-- Controls -->
-                            <a class="left carousel-control" href="#header_banners" role="button"
-                               data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#header_banners" role="button"
-                               data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-
-
+                        <?php } ?>
+                    <?php }else{ ?>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- header -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:853px;height:343px"
+                             data-ad-client="ca-pub-5256997095124165"
+                             data-ad-slot="9246576426"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                     <?php } ?>
-
 
                     <?php //echo $this->section('banner'); ?>
                 </section>
@@ -619,9 +577,7 @@ $t4x4_n = array(
         <div class="row">
             <div class="col l6 s12">
                 <h5 class="white-text">Gpautos</h5>
-                <p class="grey-text text-lighten-4">2da Avenida 20-29 Zona 10.<br>
-                    (+502) 2294-5656<br>
-                    info@gpautos.net</p>
+                <p class="grey-text text-lighten-4">sv@gpautos.net</p>
                 <h5 class="white-text">Productos</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="<?php echo base_url() ?>Productos/seguros">Seguros</a>
@@ -963,23 +919,13 @@ $t4x4_n = array(
         }
     });
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Ads sv -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5256997095124165"
-     data-ad-slot="3026517545"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
         a = s.createElement(o),
             m = s.getElementsByTagName(o)[0];
         a.async = 1;
@@ -990,7 +936,7 @@ $t4x4_n = array(
     ga('send', 'pageview');
 </script>
 
-<!-- BEGIN JIVOSITE CODE {literal} -->
+<!-- BEGIN JIVOSITE CODE {literal} --
 <script type='text/javascript'>
     (function () {
         var widget_id = '7vYnIXtktm';
@@ -1018,6 +964,53 @@ $t4x4_n = array(
     })();</script>
 <!-- {/literal} END JIVOSITE CODE -->
 </body>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="google-site-verification" content="0q-W5K9CGQetDQs6wGTW2416dOQQ5byj4oGA4q11BQU"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/ui/public/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/ui/public/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/ui/public/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/ui/public/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/ui/public/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/ui/public/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/ui/public/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/ui/public/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ui/public/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/ui/public/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/ui/public/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/ui/public/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/ui/public/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/ui/public/images/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#fb8c00">
+    <meta name="msapplication-TileImage" content="/ui/public/images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#fb8c00">
+
+    <?php if ($this->section('title')) {
+        echo $this->section('title');
+    } ?>
+
+    <?php echo $this->section('meta'); ?>
+
+    <!-- Materialize -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Fonnt Awsome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!--Import boostrap.css-->
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>/ui/public/css/bootstrap.min.css"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>ui/public/css/materialize.min.css"
+          media="screen,projection"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>ui/public/css/nouislider.css"/>
+    <?php echo $this->section('css_p'); ?>
+    <link href="<?php echo base_url() ?>ui/public/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>ui/public/css/responsive.css" rel="stylesheet">
+
+</head>
 </html>
 
 

@@ -112,9 +112,7 @@ $datos_buscador = $CI->session->userdata('filtros_buscador');
 
                     <p>
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        info@gpautos.net |
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        Lunes a Viernes 09:00 AM - 06:00 PM Sábado 09:00 AM a 01:00 PM
+                        sv@gpautos.net |
                     </p>
                 </div>
                 <div class="col m4">
@@ -138,8 +136,7 @@ $datos_buscador = $CI->session->userdata('filtros_buscador');
                     ?>
                 </div>
                 <div class="col m2">
-                    <p class="text-right"><i class="fa fa-phone"></i>
-                        (+502) 2294-5656
+                    <p class="text-right">
                         <a href="https://www.facebook.com/gpautosprediovirtual/" target="_blank"><i
                                     class="fa fa-facebook-official fa-2x"></i></a>
                     </p>
@@ -265,9 +262,7 @@ $datos_buscador = $CI->session->userdata('filtros_buscador');
         <div class="row">
             <div class="col l6 s12">
                 <h5 class="white-text">Gpautos</h5>
-                <p class="grey-text text-lighten-4">2da Avenida 20-29 Zona 10.<br>
-                    (+502) 2294-5656<br>
-                    info@gpautos.net</p>
+                <p class="grey-text text-lighten-4">sv@gpautos.net</p>
                 <h5 class="white-text">Productos</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="<?php echo base_url() ?>Productos/seguros">Seguros</a>

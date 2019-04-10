@@ -150,7 +150,7 @@ $lang['reset_password_validation_new_password_confirm_label'] = 'Confirmar Nueva
 // Activation Email
 $lang['email_activate_heading']    = 'Activar cuenta por %s';
 $lang['email_activate_subheading'] = ' %s.';
-$lang['email_activate_link']       = 'Haz click aqui !!!';
+$lang['email_activate_link']       = 'HAZ CLICK PARA ACTIVAR TU CUENTA';
 
 // Forgot Password Email
 $lang['email_forgot_password_heading']    = 'Reestablecer contraseña para %s';

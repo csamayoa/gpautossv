@@ -59,4 +59,15 @@ class Formularios_model extends CI_Model
 			'fecha' => $data['fecha']
 		));
 	}
+	public function guardar_solicitud_franquicia($data){
+	    $fecha = new DateTime();
+
+        $this->db->insert('formulario_franquicias', array(
+            'fq_nombre' => $data['nombre'],
+            'fq_correo' => $data['correo'],
+            'fq_ocupacion' => $data['ocupacion'],
+            'fq_telefono' => $data['telefono'],
+            'fq_fecha' => $fecha->format('Y-m-d')
+        ));
+    }
 }

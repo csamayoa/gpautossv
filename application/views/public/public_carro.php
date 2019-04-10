@@ -141,7 +141,7 @@ if ($carro) {
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (1).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (1).jpg')) { ?>
                                 <div class="item active">
                                     <img src="<?php echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (1).jpg' ?>"
                                          class="responsive-img" >
@@ -151,7 +151,7 @@ if ($carro) {
 
 
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (2).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (2).jpg')) { ?>
                                 <div class="item">
                                     <img src="<?php echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (2).jpg' ?>"
                                          class="img-responsive">
@@ -162,7 +162,7 @@ if ($carro) {
 
 
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (3).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (3).jpg')) { ?>
                                 <div class="item">
                                     <img src="<?php echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (3).jpg' ?>"
                                          class="img-responsive" >
@@ -172,7 +172,7 @@ if ($carro) {
 
 
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (4).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (4).jpg')) { ?>
                                 <div class="item">
                                     <img src="<?php echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (4).jpg' ?>"
                                          class="img-responsive" >
@@ -182,7 +182,7 @@ if ($carro) {
 
 
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (5).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (5).jpg')) { ?>
                                 <div class="item">
                                     <img src="<?php echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (5).jpg' ?>"
                                          class="img-responsive" >
@@ -192,7 +192,7 @@ if ($carro) {
 
 
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (6).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (6).jpg')) { ?>
                                 <div class="item">
                                     <img src="<?php  echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (6).jpg' ?>"
                                          class="img-responsive">
@@ -202,7 +202,7 @@ if ($carro) {
 
 
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (7).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (7).jpg')) { ?>
                                 <div class="item">
                                     <img src="<?php  echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (7).jpg' ?>"
                                          class="img-responsive" >
@@ -212,7 +212,7 @@ if ($carro) {
 
 
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (8).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (8).jpg')) { ?>
                                 <div class="item">
                                     <img src="<?php  echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (8).jpg' ?>"
                                          class="img-responsive" >
@@ -222,7 +222,7 @@ if ($carro) {
 
 
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (9).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (9).jpg')) { ?>
                                 <div class="item">
                                     <img src="<?php  echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (9).jpg' ?>"
                                          class="img-responsive" >
@@ -232,7 +232,7 @@ if ($carro) {
 
 
                             <?php
-                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $data_carro->id_carro . ' (10).jpg')) { ?>
+                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $data_carro->id_carro . ' (10).jpg')) { ?>
                                 <div class="item">
                                     <img src="<?php echo base_url().'web/images_cont/' . $data_carro->id_carro . ' (10).jpg' ?>"
                                          class="img-responsive" >
@@ -275,15 +275,18 @@ if ($carro) {
                             <div class="col s12 m6">
                                 <div class="dr_chat">
                                     <a class="wts_btn waves-effect waves-light btn  z-depth-3" id_carro="<?php echo $data_carro->id_carro ?>" target="_blank"
-                                       href="https://api.whatsapp.com/send?phone=502<?php echo $data_carro->crr_contacto_telefono ?>&text=<?php echo urlencode('Vi tu carro en gpautos, quisiera información del codigo: ' . $data_carro->id_carro . ' Marca: ' . $data_carro->id_marca . ' Linea: ' . $data_carro->id_linea . ' Modelo: ' . $data_carro->crr_modelo) ?>">
+                                       href="https://api.whatsapp.com/send?phone=503<?php echo $data_carro->crr_contacto_telefono ?>&text=<?php echo urlencode('Vi tu carro en gpautos, quisiera información del codigo: ' . $data_carro->id_carro . ' Marca: ' . $data_carro->id_marca . ' Linea: ' . $data_carro->id_linea . ' Modelo: ' . $data_carro->crr_modelo) ?>">
                                         chat directo con<br> vendedor <img src="<?php echo base_url(); ?>ui/public/images/ws_icon.png"></a>
                                 </div>
                             </div>
 
-                            <div class="col s12 m6">
+                            <div class="col s12 m12">
+                                <p>
+                                    <br>
                                 <a class="waves-effect waves-light btn orange darken-3 z-depth-3"
                                    href="#informacion_carro_modal"><i
-                                            class="fa fa-info left"></i> Pedir información</a>
+                                            class="fa fa-info left"></i> pedir información por correo electrónico</a>
+                                </p>
                             </div>
                             <!--<div class="col s12 m3">
                                 <a class="waves-effect waves-light btn orange darken-3 z-depth-3"><i
@@ -303,7 +306,7 @@ if ($carro) {
                                 <li class="collection-item">
                                     <div class="dr_chat">
                                         <a class="wts_btn waves-effect waves-light btn  z-depth-3" id_carro="<?php echo $data_carro->id_carro ?>" target="_blank"
-                                           href="https://api.whatsapp.com/send?phone=502<?php echo $data_carro->crr_contacto_telefono ?>&text=<?php echo urlencode('Vi tu carro en gpautos, quisiera información del codigo: ' . $data_carro->id_carro . ' Marca: ' . $data_carro->id_marca . ' Linea: ' . $data_carro->id_linea . ' Modelo: ' . $data_carro->crr_modelo) ?>">
+                                           href="https://api.whatsapp.com/send?phone=503<?php echo $data_carro->crr_contacto_telefono ?>&text=<?php echo urlencode('Vi tu carro en gpautos, quisiera información del codigo: ' . $data_carro->id_carro . ' Marca: ' . $data_carro->id_marca . ' Linea: ' . $data_carro->id_linea . ' Modelo: ' . $data_carro->crr_modelo) ?>">
                                             chat directo con<br> vendedor <img src="<?php echo base_url(); ?>ui/public/images/ws_icon.png"></a>
                                     </div>
                                 </li>
@@ -311,7 +314,7 @@ if ($carro) {
                                     <div>
                                         <a class="waves-effect waves-light btn orange darken-3 z-depth-3"
                                            href="#informacion_carro_modal"><i
-                                                    class="fa fa-info left"></i> Pedir información</a>
+                                                    class="fa fa-info left"></i> pedir información por correo electrónico</a>
 
                                     </div>
                                 </li>
@@ -344,8 +347,8 @@ if ($carro) {
                     <ul id="tabs-swipe-demo" class="tabs">
                         <li class="tab col m4 s12"><a class="active" href="#datos_vehiculo"> <i
                                         class="material-icons">info</i>Datos del vehiculo</a></li>
-                        <li class="tab col m4 s12"><a href="#financiamiento"> <i class="material-icons">attach_money</i>Financiamiento</a>
-                        </li>
+                       <!-- <li class="tab col m4 s12"><a href="#financiamiento"> <i class="material-icons">attach_money</i>Financiamiento</a>
+                        </li>-->
                         <?php if ($data_carro->crr_otros != '') { ?>
                             <li class="tab col m4 s12"><a href="#comentario"> <i class="material-icons">attach_money</i>Comentario</a>
                             </li>
@@ -523,160 +526,9 @@ if ($carro) {
                         </div>
                         <!--/.Panel-->
                     </div>
-                    <div id="financiamiento" class="col s12 orange darken-1">
-                        <!--Panel-->
-                        <div class="card">
-                            <div class="card-content">
-                                <a class="waves-effect waves-light btn" href="http://gpautos.net/Productos/financiamiento/<?php echo $data_carro->id_carro; ?>" target="_blank">Precalificación</a>
-                                <!--
-                                <div id="calculador_holder" style="<?php if($data_carro->crr_precio < '25000'){ echo 'display:none;'; } ?>">
-                                    <div id="calculador_carro">
-                                        <span class="card-title">Estimador de financiamiento</span>
-                                        <div class="row" style="display: none">
-                                            <div class="input-field col m12">
-
-                                                <label for="precio_carro">Precio del vehículo</label>
-                                            </div>
-                                        </div>
-                                        <div class="row" style="display: none">
-                                            <div class="input-field col m8 s12">
-                                                <p id="p_carro_slider"></p>
-                                            </div>
-                                            <div class="input-field col m4 s12">
-                                                <input id="p_carro_input" name="p_carro_min" type="number"
-                                                       min="10000" max="200000" step="1000"
-                                                       value="<?php echo $data_carro->crr_precio; ?>"
-                                                       placeholder="Precio" disabled/>
-                                                <label for="icon_prefix">Precio carro:</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col m6 s12">
-                                                <span class="card-title">Incluir traspaso</span>
-                                            </div>
-                                            <div class="col m4 s12">
-                                                <!-- Switch --
-                                                <div class="switch">
-                                                    <label>
-                                                        No
-                                                        <input type="checkbox" id="traspaso_switch"
-                                                               name="traspaso_switch">
-                                                        <span class="lever"></span>
-                                                        Si
-                                                    </label>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col s12 m4">
-                                            <div class="card">
-                                                <div class="card-content">
-                                            <span class="card-title">Enganche <i
-                                                        class="small material-icons tooltipped" data-position="bottom"
-                                                        data-delay="50"
-                                                        data-tooltip="El enganche debe ser de 0% o minimo de 20% ">info</i></span>
-                                                    <div class="row">
-                                                        <div class="input-field col m12 s12">
-                                                            <p id="enganche_carro_slider"></p>
-                                                        </div>
-                                                        <div class="input-field col m12 s12">
-                                                            <input id="enganche_carro_input" name="p_carro_min"
-                                                                   type="number"
-                                                                   min="10000" max="200000" step="1000"
-                                                                   placeholder="Enganche:"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col s12 m4">
-                                            <div class="card ">
-                                                <div class="card-content">
-                                            <span class="card-title">Plazo <i class="small material-icons tooltipped"
-                                                                              data-position="bottom"
-                                                                              data-delay="50"
-                                                                              data-tooltip="El enganche debe ser de 0% o minimo de 20% ">info</i></span>
-                                                    <div class="row">
-                                                        <div class="input-field col m12 s12">
-                                                            <p id="meses_carro_slider"></p>
-                                                        </div>
-                                                        <div class="input-field col m12 s12">
-                                                            <input id="meses_carro_input" name="p_carro_min"
-                                                                   type="number"
-                                                                   min="6" max="72" step="12"
-                                                                   placeholder="Plazo:"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col s12 m4">
-                                            <div class="card  grey " id="calculo_carro">
-                                                <div class="card-content white-text">
-                                                    <span class="card-title">Calculo</span>
-                                                    <ul class="collection">
-                                                        <a href="#!" class="collection-item"><span
-                                                                    class="badge white-text">Q.<?php echo $data_carro->crr_precio; ?></span>Precio
-                                                            carro:</a>
-                                                        <a href="#!" class="collection-item"><span
-                                                                    class="badge white-text">Q.1120</span>Comision venta
-                                                            de vehiculo:</a>
-                                                        <a href="#!" class="collection-item"><span id="traspaso_t"
-                                                                                                   class="badge white-text">0</span>traspaso:</a>
-                                                        <a href="#!" class="collection-item"><span id="total_t"
-                                                                                                   class="badge white-text">Q.<?php echo $data_carro->crr_precio; ?></span>Total:</a>
-                                                        <a href="#!" class="collection-item"><span id="pago_mensual_t"
-                                                                                                   class="badge white-text">0</span>Pago
-                                                            mensual: <i class="small material-icons tooltipped"
-                                                                        data-position="bottom"
-                                                                        data-delay="50"
-                                                                        data-tooltip="Cuota mensual puede varia segun seguro ">info</i></a>
-                                                    </ul>
-                                                    <div class="row" style="display: none">
-                                                        <div class="input-field col m12">
-                                                            <label for="precio_carro" class="white-text">Pago
-                                                                mensual <i class="small material-icons tooltipped"
-                                                                           data-position="bottom"
-                                                                           data-delay="50"
-                                                                           data-tooltip="Cuota mensual varia segun seguro ">info</i></label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row" style="display: none">
-                                                        <!--<div class="input-field col m12 s12">
-                                                            <p id="pago_carro_slider"></p>
-                                                        </div>--
-                                                        <div class="input-field col m12 s12">
-                                                            <input id="pago_carro_input" class="white-text"
-                                                                   name="p_carro_min" type="number"
-                                                                   min="10000" max="200000" step="1000"
-                                                                   placeholder="Pago mensual:" disabled/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="row">
-                                    <a class="waves-effect waves-light btn white orange-text darken-3 z-depth-3"
-                                       href="#credito_carro_modal"><i
-                                                class="fa fa-send left"></i> Solicitar crédito</a>
-                                </div>
-
-                            </div>-->
-                        </div>
-                    </div>
                     <?php if ($data_carro->crr_otros != '') { ?>
                         <div id="comentario">
 
-                            <?php echo $data_carro->crr_otros; ?>
                         </div>
                     <?php } ?>
                     <!--/.Panel-->
@@ -779,7 +631,7 @@ if ($carro) {
 
         </div>
         <div class="modal-footer">
-            <a class="btn btn-flat waves-green" id="solicitar_info">Enviar</a>
+            <a class="waves-effect waves-light btn orange darken-3 z-depth-3" id="solicitar_info">Enviar</a>
         </div>
     </div>
 

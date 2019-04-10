@@ -25,28 +25,20 @@ $ubicacion_carro_select = array(
     'required' => 'required'
 );
 $ubicacion_carro_select_options = array(
-    "ALTA VERAPAZ" => "ALTA VERAPAZ",
-    "BAJA VERAPAZ" => "BAJA VERAPAZ",
-    "CHIMALTENANGO" => "CHIMALTENANGO",
-    "CHIQUIMULA" => "CHIQUIMULA",
-    "EL PROGRESO" => "EL PROGRESO",
-    "ESCUINTLA" => "ESCUINTLA",
-    "GUATEMALA" => "GUATEMALA",
-    "HUEHUETENANGO" => "HUEHUETENANGO",
-    "IZABAL" => "IZABAL",
-    "JALAPA" => "JALAPA",
-    "JUTIAPA" => "JUTIAPA",
-    "PETÉN" => "PETÉN",
-    "QUETZALTENANGO" => "QUETZALTENANGO",
-    "QUICHÉ" => "QUICHÉ",
-    "RETALHULEU" => "RETALHULEU",
-    "SACATEPÉQUEZ" => "SACATEPÉQUEZ",
-    "SAN MARCOS" => "SAN MARCOS",
-    "SANTA ROSA" => "SANTA ROSA",
-    "SOLOLÁ" => "SOLOLÁ",
-    "SUCHITEPÉQUEZ" => "SUCHITEPÉQUEZ",
-    "TOTONICAPÁN" => "TOTONICAPÁN",
-    "ZACAPA" => "ZACAPA"
+    "SAN SALVADOR" => "SAN SALVADOR",
+    "LA LIBERTAD" => "LA LIBERTAD",
+    "SANTA ANA" => "SANTA ANA",
+    "SONSONATE" => "SONSONATE",
+    "SAN MIGUEL" => "SAN MIGUEL",
+    "USULUTÁN" => "USULUTÁN",
+    "AHUACHAPÁN" => "AHUACHAPÁN",
+    "LA PAZ" => "LA PAZ",
+    "LA UNIÓN" => "LA UNIÓN",
+    "CUSCATLÁN" => "CUSCATLÁN",
+    "CHALATENANGO" => "CHALATENANGO",
+    "MORAZÁN" => "MORAZÁN",
+    "SAN VICENTE" => "SAN VICENTE",
+    "CABAÑAS" => "CABAÑAS",
 );
 
 $parametros = $parametros->result();
@@ -123,7 +115,7 @@ $precio_facebook = $parametros[4];
                                             <td class="t_vip"><i
                                                         class="material-icons light-green-text accent-4">check</i></td>
                                         </tr>
-                                        <tr>
+                                        <!--<tr>
                                             <td>
                                                 <p class="bold">
                                                     Crédito
@@ -150,6 +142,7 @@ $precio_facebook = $parametros[4];
                                             <td class="t_vip"><i
                                                         class="material-icons light-green-text accent-4">check</i></td>
                                         </tr>
+                                        -->
                                         <tr>
                                             <td>
                                                 <p class="bold">
@@ -229,9 +222,9 @@ $precio_facebook = $parametros[4];
                                                 <p class="bold">Precio</p>
                                             </td>
                                             <td class="t_individual">
-                                                Q.<?php echo display_formato_dinero_return($precio_individual->parametro_valor); ?></td>
+                                                $ <?php echo display_formato_dinero_return($precio_individual->parametro_valor); ?></td>
                                             <td class="t_vip">
-                                                Q.<?php echo display_formato_dinero_return($precio_vip->parametro_valor); ?></td>
+                                                $ <?php echo display_formato_dinero_return($precio_vip->parametro_valor); ?></td>
                                         </tr>
                                         <tr class="grey darken-2 white-text">
                                             <td>Seleccione opción</td>
@@ -325,6 +318,7 @@ $precio_facebook = $parametros[4];
     precio_feria = <?php echo display_formato_dinero_return($precio_feria->parametro_valor); ?>;
     precio_facebook = <?php echo display_formato_dinero_return($precio_facebook->parametro_valor); ?>;
 
+    $(".t_vip").hide();
     $("#seleccion_anuncio").on('change', function () {
         //reset total a pagar
         total_a_pagar = 0;
@@ -351,7 +345,7 @@ $precio_facebook = $parametros[4];
             if(tipo_anuncio == 'vip'){
                 precio_anuncio = precio_vip;
             }
-            $("#anuncio_precio").html('Q.'+ precio_anuncio);
+            $("#anuncio_precio").html('$ '+ precio_anuncio);
             $("#anuncio_nombre").html(tipo_anuncio);
             total_a_pagar = total_a_pagar + precio_anuncio;
         }
@@ -367,10 +361,10 @@ $precio_facebook = $parametros[4];
         if(facebook){
             console.log(facebook);
             total_a_pagar = total_a_pagar + precio_facebook;
-            $("#anuncio_precio_facebook").html('Q.'+precio_facebook);
+            $("#anuncio_precio_facebook").html('$ '+precio_facebook);
         }
 
-        $("#total_a_pagar").html('Q.'+total_a_pagar);
+        $("#total_a_pagar").html('$ '+total_a_pagar);
 
 
 

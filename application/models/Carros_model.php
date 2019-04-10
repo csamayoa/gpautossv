@@ -567,7 +567,7 @@ class Carros_model extends CI_Model
 
 		$this->db->where('crr_estatus', 'Alta');
 		$this->db->where('crr_estado', 'Usado');
-		$this->db->where('id_predio_virtual', 9);
+		//$this->db->where('id_predio_virtual', 0);
 		$this->db->order_by('', 'RANDOM');
 		$this->db->limit(8);
 		$query = $this->db->get('carro');
