@@ -542,7 +542,7 @@ class Cliente extends Base_Controller
         $billTo->city = $data['ubicacion_anuncio'];
         $billTo->state = $data['ubicacion_anuncio'];
         $billTo->postalCode = '01010';
-        $billTo->country = 'GT';
+        $billTo->country = 'SV';
         $billTo->email = $data['email'];
         $billTo->ipAddress = $data['ip_adress'];
         $request->billTo = $billTo;
@@ -555,7 +555,7 @@ class Cliente extends Base_Controller
 
 
         $purchaseTotals = new stdClass();
-        $purchaseTotals->currency = 'GTQ';
+        $purchaseTotals->currency = 'USD';
         $request->purchaseTotals = $purchaseTotals;
 
 
@@ -676,6 +676,8 @@ class Cliente extends Base_Controller
         //enviar correo
         $this->email->send();
     }
+
+
 
 
     public function publicar_carro()
@@ -836,7 +838,6 @@ class Cliente extends Base_Controller
 
 
     }
-
     public function guardar_carro_vip()
     {
         if (!$this->ion_auth->logged_in()) {
@@ -900,6 +901,39 @@ class Cliente extends Base_Controller
 
         $carro_id = $this->Carros_model->crear_carro_public($datos);
         redirect('cliente/subir_fotos/' . $carro_id);
+    }
+
+    //anuncio pendiente
+    public function correo_anuncio_pendiente($data)
+    {
+
+        $data['marca'] = 'Mazda';
+        $data['linea'] = '3';
+        $data['modelo'] = '2010';
+
+        //configuracion de correo
+        $config['mailtype'] = 'html';
+        $configGmail = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.gmail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'info@gpautos.net',
+            'smtp_pass' => 'JdGg2005gp',
+            'mailtype' => 'html',
+            'charset' => 'utf-8',
+            'newline' => "\r\n"
+        );
+        $this->email->initialize($configGmail);
+        $this->email->from('info@gpautos.net', 'GP AUTOS');
+        //$this->email->to($email_contacto);
+        $this->email->bcc('csamayoa@zenstudiogt.com');
+        $this->email->subject('Anuncio pendiente de aprobación');
+
+        $message = $this->templates->render('public/carro_pendiente_tpl', $data);
+        $this->email->message($message);
+        //enviar correo
+        $this->email->send();
+
     }
 
     public function guardar_editar_carro()

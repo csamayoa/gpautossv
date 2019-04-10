@@ -83,9 +83,8 @@
                         <li class="collection-item avatar" id="pago_efectivo_item">
 
                                 <i class="material-icons circle green">attach_money</i>
-                                <span class="title">Efectivo</span>
-                                <p>Se llegara a hacer el cobro a su ubicación</p>
-                                <p>O pagara en las oficinas de Gp Autos</p>
+                                <span class="title">Anuncio gratuito</span>
+                                <p>Publica tu anuncio sin ningun costo</p>
                                 <span class="secondary-content">
                                     <input name="forma_pago" type="radio" id="pago_efectivo" value="pago_efectivo"/>
                                 <label for="pago_efectivo"></label>

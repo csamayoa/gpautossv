@@ -247,7 +247,7 @@ $precio_facebook = $parametros[4];
                                     <hr>
                                     <table class="striped table-bordes">
                                         <thead>
-                                        <tr class="grey darken-2 white-text">
+                                        <tr class="orange darken-3 white-text">
                                             <td>Agrégale interés a tu publicación</td>
                                             <td>Total</td>
                                         </tr>

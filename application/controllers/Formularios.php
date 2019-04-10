@@ -523,37 +523,7 @@ class Formularios extends Base_Controller
         echo $this->templates->render('auth/email/activate.tpl', $data);
     }
 
-    public function correo_anuncio_pendiente()
-    {
 
-        $data['marca'] = 'Mazda';
-        $data['linea'] = '3';
-        $data['modelo'] = '2010';
-
-        //configuracion de correo
-        $config['mailtype'] = 'html';
-        $configGmail = array(
-            'protocol' => 'smtp',
-            'smtp_host' => 'ssl://smtp.gmail.com',
-            'smtp_port' => 465,
-            'smtp_user' => 'info@gpautos.net',
-            'smtp_pass' => 'JdGg2005gp',
-            'mailtype' => 'html',
-            'charset' => 'utf-8',
-            'newline' => "\r\n"
-        );
-        $this->email->initialize($configGmail);
-        $this->email->from('info@gpautos.net', 'GP AUTOS');
-        //$this->email->to($email_contacto);
-        $this->email->bcc('csamayoa@zenstudiogt.com');
-        $this->email->subject('Anuncio pendiente de aprobación');
-
-        $message = $this->templates->render('public/carro_pendiente_tpl', $data);
-        $this->email->message($message);
-        //enviar correo
-        $this->email->send();
-
-    }
     public function franquicias(){
         $data = cargar_componentes_buscador();
         $data['header_banners'] = $this->Banners_model->header_banners_activos();

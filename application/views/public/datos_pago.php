@@ -382,7 +382,7 @@ $telefono = array(
                                                             id="anuncio_nombre"><?php echo $tipo_anuncio; ?></span>
                                                 </td>
                                                 <td>
-                                                    <span id="anuncio_precio">Q.<?php echo $precio_anuncio->parametro_valor; ?></span>
+                                                    <span id="anuncio_precio">$ <?php echo $precio_anuncio->parametro_valor; ?></span>
                                                 </td>
                                             </tr>
                                             <?php if ($precio_feria) { ?>
@@ -403,13 +403,13 @@ $telefono = array(
                                                         Facebook
                                                     </td>
                                                     <td>
-                                                        <span id="anuncio_precio_facebook">Q.<?php echo $precio_facebook->parametro_valor; ?></span>
+                                                        <span id="anuncio_precio_facebook">$ <?php echo $precio_facebook->parametro_valor; ?></span>
                                                     </td>
                                                 </tr>
                                             <?php } ?>
                                             <tr>
                                                 <td>Total a pagar:</td>
-                                                <td><span id="total_a_pagar">Q.<?php echo $total_a_pagar; ?></span></td>
+                                                <td><span id="total_a_pagar">$ <?php echo $total_a_pagar; ?></span></td>
                                             </tr>
                                             </tbody>
                                         </table>
