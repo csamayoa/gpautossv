@@ -250,34 +250,16 @@ if($usuario){
                                     <div class="row">
                                         <div class="col-md-6">
                                             <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (1).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (1).jpg' ?>"
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (1).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (1).jpg' ?>"
                                                      class="img-responsive">
                                             <?php } else {
                                             } ?>
                                         </div>
                                         <div class="col-md-6">
                                             <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (2).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (2).jpg' ?>"
-                                                     class="img-responsive">
-                                            <?php } else {
-                                            } ?>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (3).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (3).jpg' ?>"
-                                                     class="img-responsive">
-                                            <?php } else {
-                                            } ?>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (4).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (4).jpg' ?>"
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (2).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (2).jpg' ?>"
                                                      class="img-responsive">
                                             <?php } else {
                                             } ?>
@@ -286,34 +268,16 @@ if($usuario){
                                     <div class="row">
                                         <div class="col-md-6">
                                             <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (5).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (5).jpg' ?>"
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (3).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (3).jpg' ?>"
                                                      class="img-responsive">
                                             <?php } else {
                                             } ?>
                                         </div>
                                         <div class="col-md-6">
                                             <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (6).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (6).jpg' ?>"
-                                                     class="img-responsive">
-                                            <?php } else {
-                                            } ?>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (7).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (7).jpg' ?>"
-                                                     class="img-responsive">
-                                            <?php } else {
-                                            } ?>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (8).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (8).jpg' ?>"
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (4).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (4).jpg' ?>"
                                                      class="img-responsive">
                                             <?php } else {
                                             } ?>
@@ -322,16 +286,52 @@ if($usuario){
                                     <div class="row">
                                         <div class="col-md-6">
                                             <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (9).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (9).jpg' ?>"
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (5).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (5).jpg' ?>"
                                                      class="img-responsive">
                                             <?php } else {
                                             } ?>
                                         </div>
                                         <div class="col-md-6">
                                             <?php
-                                            if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (10).jpg')) { ?>
-                                                <img src="<?php echo 'http://gpautos.net/web/images_cont/' . $carro->id_carro . ' (10).jpg' ?>"
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (6).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (6).jpg' ?>"
+                                                     class="img-responsive">
+                                            <?php } else {
+                                            } ?>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <?php
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (7).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (7).jpg' ?>"
+                                                     class="img-responsive">
+                                            <?php } else {
+                                            } ?>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <?php
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (8).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (8).jpg' ?>"
+                                                     class="img-responsive">
+                                            <?php } else {
+                                            } ?>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <?php
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (9).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (9).jpg' ?>"
+                                                     class="img-responsive">
+                                            <?php } else {
+                                            } ?>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <?php
+                                            if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (10).jpg')) { ?>
+                                                <img src="<?php echo base_url().'/web/images_cont/' . $carro->id_carro . ' (10).jpg' ?>"
                                                      class="img-responsive">
                                             <?php } else {
                                             } ?>

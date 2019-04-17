@@ -13,14 +13,12 @@
     <tr>
         <td colspan="3" style="text-align: center">
             <h1>FELICITACIONES</h1>
-            <P> En Breve estaremos publicanto tu anuncio</P>
+            <P> Tu anuncio ha sido aprovado</P>
         </td>
     </tr>
     <tr>
         <td colspan="3" style="text-align: center">
-            <p><?php echo $marca?></p>
-            <p><?php echo $linea?></p>
-            <p><?php echo $modelo?></p>
+            <p><?php echo $marca?> | <?php echo $linea?> | <?php echo $modelo?></p>
         </td>
     </tr>
     <tr>
@@ -31,7 +29,7 @@
     <tr>
         <td colspan="3">
             <p style="width: 60%; margin: 0 auto; background: #e79637; color: #fff; padding: 10px; text-align: center">
-                <span>En breve tu anuncio estara Activo</span>
+                <span>Tu anuncio ha sido aprovado</span>
             </p>
             <ul>
                 <li>Recuerda que si deseas editar tu anuncio puedes ingresar en sv.gpautos.net e ingresar a tu cuenta.</li>

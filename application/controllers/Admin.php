@@ -1182,7 +1182,8 @@ class Admin extends Base_Controller
         $data['id_carro'] = $this->uri->segment(3);
 
         $this->Carros_model->dar_alta_carro_id($data['id_carro']);
-        redirect(base_url() . 'admin/pendientes');
+
+        redirect(base_url() . 'admin/correo_anuncio_publicado/'.$data['id_carro']);
 
     }
     public function actualizar_estados_carros()
@@ -1376,6 +1377,52 @@ class Admin extends Base_Controller
 
         $this->Usuarios_model->actualizar_usuarios($post_data);
         redirect(base_url() . 'admin/usuarios/');
+    }
+
+
+    //carro publicado
+    public function correo_anuncio_publicado()
+    {
+        //carro_id
+        $carro_id = $this->uri->segment(3);
+        // datos carro
+        $carro = $this->Carros_model->get_datos_carro_cliente($carro_id);
+        $carro = $carro->row();
+        //user_id
+        $user_id = $carro->user_id;
+        //datos usuario
+        $user =  $this->Cliente_model->get_cliente_data($user_id);
+        $user = $user->row();
+
+        $data['marca'] = $carro->id_marca;
+        $data['linea'] = $carro->id_linea;
+        $data['modelo'] = $carro->crr_modelo;
+        $correo = $user->email;
+        //configuracion de correo
+        $config['mailtype'] = 'html';
+        $configGmail = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.gmail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'info@gpautos.net',
+            'smtp_pass' => 'JdGg2005gp',
+            'mailtype' => 'html',
+            'charset' => 'utf-8',
+            'newline' => "\r\n"
+        );
+        $this->email->initialize($configGmail);
+        $this->email->from('info@gpautos.net', 'GP AUTOS');
+        $this->email->to($correo);
+        $this->email->cc('gppredio@gpautos.net');
+        $this->email->bcc('csamayoa@zenstudiogt.com');
+        $this->email->subject('Anuncio publicado');
+
+        $message = $this->templates->render('public/carro_pendiente_tpl', $data);
+        $this->email->message($message);
+        //enviar correo
+        $this->email->send();
+        redirect(base_url().'admin/pendientes');
+
     }
 
 

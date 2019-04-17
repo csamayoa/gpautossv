@@ -18,8 +18,6 @@
 ]);
 
 $carro = $carro->row();
-
-
 ?>
 
 
@@ -53,7 +51,7 @@ $carro = $carro->row();
                                             <label class="" title="img_1">
 
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (1).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (1).jpg')) { ?>
                                                         <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (1).jpg' ?>"
                                                              id="img_1_placeholder" >
                                                 <?php } else { ?>
@@ -84,7 +82,7 @@ $carro = $carro->row();
                                         <div class="card-image">
                                             <label class="" title="img_2">
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (2).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (2).jpg')) { ?>
                                                     <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (2).jpg' ?>"
                                                          id="img_2_placeholder" >
                                                 <?php } else { ?>
@@ -114,7 +112,7 @@ $carro = $carro->row();
                                         <div class="card-image">
                                             <label class="" title="img_3">
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (3).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (3).jpg')) { ?>
                                                     <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (3).jpg' ?>"
                                                          id="img_3_placeholder" >
                                                 <?php } else { ?>
@@ -144,7 +142,7 @@ $carro = $carro->row();
                                         <div class="card-image">
                                             <label class="" title="img_4">
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (4).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (4).jpg')) { ?>
                                                     <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (4).jpg' ?>"
                                                          id="img_4_placeholder" >
                                                 <?php } else { ?>
@@ -176,7 +174,7 @@ $carro = $carro->row();
                                         <div class="card-image">
                                             <label class="" title="img_5">
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (5).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (5).jpg')) { ?>
                                                     <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (5).jpg' ?>"
                                                          id="img_5_placeholder" >
                                                 <?php } else { ?>
@@ -206,7 +204,7 @@ $carro = $carro->row();
                                         <div class="card-image">
                                             <label class="" title="img_6">
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (6).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (6).jpg')) { ?>
                                                     <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (6).jpg' ?>"
                                                          id="img_6_placeholder" >
                                                 <?php } else { ?>
@@ -236,7 +234,7 @@ $carro = $carro->row();
                                         <div class="card-image">
                                             <label class="" title="img_7">
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (7).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (7).jpg')) { ?>
                                                     <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (7).jpg' ?>"
                                                          id="img_7_placeholder" >
                                                 <?php } else { ?>
@@ -266,7 +264,7 @@ $carro = $carro->row();
                                         <div class="card-image">
                                             <label class="" title="img_8">
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (8).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (8).jpg')) { ?>
                                                     <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (8).jpg' ?>"
                                                          id="img_8_placeholder" >
                                                 <?php } else { ?>
@@ -296,7 +294,7 @@ $carro = $carro->row();
                                         <div class="card-image">
                                             <label class="" title="img_9">
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (9).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (9).jpg')) { ?>
                                                     <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (9).jpg' ?>"
                                                          id="img_9_placeholder" >
                                                 <?php } else { ?>
@@ -326,7 +324,7 @@ $carro = $carro->row();
                                         <div class="card-image">
                                             <label class="" title="img_10">
                                                 <?php
-                                                if (file_exists('/home2/gpautos/public_html/web/images_cont/' . $carro->id_carro . ' (10).jpg')) { ?>
+                                                if (file_exists('/home2/gpautos/sv_gpautos/web/images_cont/' . $carro->id_carro . ' (10).jpg')) { ?>
                                                     <img src="<?php  echo base_url().'web/images_cont/' . $carro->id_carro . ' (10).jpg' ?>"
                                                          id="img_10_placeholder" >
                                                 <?php } else { ?>
@@ -354,7 +352,7 @@ $carro = $carro->row();
                             </div>
                             <div class="row">
                                 <a class=" btn orange darken-1"
-                                   href="<?php echo base_url() . 'cliente/perfil/'; ?>"> Terminar</a>
+                                   href="<?php echo base_url() . 'cliente/correo_en_revision/'.$carro->id_carro.'/'.$user_id ; ?>"> Terminar</a>
                             </div>
 
                             <!--Materialize modal-->

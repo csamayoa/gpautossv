@@ -96,7 +96,7 @@ foreach ($tipos_cf->result() as $tipo_carro) {
 }
 
 //MARCA
-$marca_carro_select = array(
+/*$marca_carro_select = array(
     'name' => 'marca_carro_uf',
     'id' => 'marca_carro_uf',
     'class' => 'validate ',
@@ -105,11 +105,20 @@ $marca_carro_select = array(
 $marca_carro_select_options = array();
 foreach ($marca_cf->result() as $marca_carro) {
     $marca_carro_select_options[$marca_carro->nombre] = $marca_carro->nombre;
-}
+}*/
+$marca = array(
+    'type' => 'text',
+    'name' => 'marca_carro_uf',
+    'id' => 'marca_carro_uf',
+    'class' => ' validate',
+    'placeholder' => 'Marca',
+    //'value'       => $carro->crr_placa,
+    'required' => 'required'
+);
 
 
 //LINEA
-$linea_carro_select = array(
+/*$linea_carro_select = array(
     'name' => 'linea_carro_uf',
     'id' => 'linea_carro_uf',
     'class' => 'validate',
@@ -121,6 +130,16 @@ if ($linea) {
         $linea_carro_select_options[$linea_carro->id_linea] = $linea_carro->id_linea;
     }
 }
+*/
+$linea = array(
+    'type' => 'text',
+    'name' => 'linea_carro_uf',
+    'id' => 'linea_carro_uf',
+    'class' => ' validate',
+    'placeholder' => 'Linea',
+    //'value'       => $carro->crr_placa,
+    'required' => 'required'
+);
 
 //UBICACION
 $ubicacion_carro_select = array(
@@ -155,8 +174,7 @@ $moneda_carro_select = array(
     'required' => 'required'
 );
 $moneda_carro_select_options = array(
-    '$' => '$',
-    'Q' => 'Q'
+    '$' => '$'
 );
 
 //Precio
@@ -166,7 +184,7 @@ $precio = array(
     'id' => 'precio',
     'class' => 'validate',
     'placeholder' => 'Precio',
-    'min' => '10000',
+    'min' => '1000',
     //'value'       => $carro->crr_precio,
     'required' => 'required'
 );
@@ -180,7 +198,7 @@ $otros = array(
     'class' => 'materialize-textarea validate',
     'data-length' => '300',
     //'value'     => $carro->crr_otros,
-    'required' => 'required'
+    //'required' => 'required'
 );
 
 $modelo = array(
@@ -706,12 +724,12 @@ $CI =& get_instance();
                                         </div>
                                         <div class="input-field col s12 m4">
                                             <!--MARCA-->
-                                            <?php echo form_dropdown($marca_carro_select, $marca_carro_select_options) ?>
+                                            <?php echo form_input($marca); ?>
                                             <label class="control-label">MARCA</label>
                                         </div>
                                         <div class="input-field col s12 m4">
                                             <!--LINEA-->
-                                            <?php echo form_dropdown($linea_carro_select, $linea_carro_select_options) ?>
+                                            <?php echo form_input($linea); ?>
                                             <label class="control-label">LINEA</label>
                                         </div>
                                     </div>

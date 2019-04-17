@@ -235,8 +235,14 @@ class Cliente extends Base_Controller
             'feria' => $this->input->post('feria_check'),
             'facebook' => $this->input->post('facebook_check'),
         );
-
+        //pasamos datos de seleccion a variables de sesion
         $this->session->set_userdata($datos_anuncio);
+        //si no selecciono facebook redirigimos a datos de pago
+        if($datos_anuncio['facebook']){
+            echo 'selecciono facebook';
+        }else{
+            redirect(base_url().'cliente/datos_pago');
+        }
 
         // print_contenido($_POST);
         //print_contenido($_SESSION);
@@ -258,7 +264,14 @@ class Cliente extends Base_Controller
         if ($this->session->flashdata('error')) {
             $data['error'] = reasoncode_text($this->session->flashdata('error'));
         } else {
+            if ($this->session->facebook) {
+                echo 'selecciono facebook';
+            }else{
+                redirect(base_url().'cliente/guarda_pago_gratuito');
+            }
+
             $datos_anuncio = array(
+
                 'forma_pago' => $this->input->post('forma_pago'),
             );
 
@@ -346,7 +359,59 @@ class Cliente extends Base_Controller
         $data['carro'] = $this->Carros_model->get_datos_carro_cliente($data['carro_id']);
         echo $this->templates->render('public/pago_efectivo', $data);
     }
+    public function guarda_pago_gratuito()
+    {
+        //comprobacion de sesion y datos de usuario
+        if (!$this->ion_auth->logged_in()) {
+            // redirect them to the login page
+            redirect('cliente/login');
+        }
+        $user_id = $this->ion_auth->get_user_id();
+        $datos_usuario = $this->Cliente_model->get_cliente_data($user_id);
+        $datos_usuario = $datos_usuario->row();
+        $nombre_usuario = $datos_usuario->first_name . ' ' . $datos_usuario->last_name;
 
+
+        //datos de sesion
+        $data['forma_pago'] = $this->session->forma_pago;
+        $data['tipo_anuncio'] = $this->session->tipo_anuncio;
+        $data['ubicacion_anuncio'] = $this->session->ubicacion_anuncio;
+        $data['email'] = $this->session->email;
+
+        //datos de producto
+        $data['tipo_anuncio'] = $this->session->tipo_anuncio;
+
+        $data['precio_anuncio'] = 0;
+        $data['precio_feria'] = false;
+        $data['precio_facebook'] = false;
+        $total_a_pagar = 0;
+
+        //datos de facturacion
+        $nombre_factura = $this->input->post('nombre_facturacion');
+        $direccion_factura = $this->input->post('direccion_facturacion');
+        $nit = $this->input->post('nit_facturacion');
+
+        //datos para guardar pago
+        $datos_pago_efectivo = array(
+            'user_id' => $user_id,
+            'direccion' => 'online',
+            'telefono' => 'online',
+            'monto' => '0',
+            'nombre_factura' => $nombre_usuario,
+            'nit' => '',
+            'direccion_factura' => 'online',
+        );
+        //guardar pago
+        $this->Pagos_model->guardar_pago_gratuito($datos_pago_efectivo);
+
+        //correo notificacion de pago
+        $this->notiticacion_pago($user_id, $data['email'], $nombre_usuario, $total_a_pagar, $data['tipo_anuncio'], 'Anuncio gratuito EL Salvador');
+
+        //redireccion
+        if ($data['tipo_anuncio'] == 'individual') {
+            redirect(base_url() . 'cliente/publicar_carro');
+        }
+    }
     public function guarda_pago_efectivo()
     {
         //comprobacion de sesion y datos de usuario
@@ -1050,6 +1115,7 @@ class Cliente extends Base_Controller
         $data['header_banners'] = $this->Banners_model->header_banners_activos();
         $user_id = $this->ion_auth->get_user_id();
         $data['datos_usuario'] = $this->Cliente_model->get_cliente_data($user_id);
+        $data['user_id'] = $user_id;
         $data['carro'] = $this->Carros_model->get_datos_carro_cliente($data['carro_id']);
         echo $this->templates->render('public/subir_fotos', $data);
     }
@@ -1196,9 +1262,18 @@ class Cliente extends Base_Controller
         }
     }
 
-    function correo_publicacion()
+    function correo_en_revision()
     {
-
+        //user_id
+        $user_id  = $this->uri->segment(4);
+        //datos usuario
+        $user =  $this->Cliente_model->get_cliente_data($user_id);
+        $user = $user->row();
+        //carro_id
+        $carro_id = $this->uri->segment(3);
+        // datos carro
+        $carro = $this->Carros_model->get_datos_carro_cliente($carro_id);
+        $carro = $carro->row();
         //configuracion de correo
         $config['mailtype'] = 'html';
 
@@ -1216,11 +1291,12 @@ class Cliente extends Base_Controller
 
 
         $this->email->from('info@gpautos.net', 'GP AUTOS');
-        //$this->email->to('gppredio@gpautos.net');
-        //$this->email->bcc('csamayoa@zenstudiogt.com');
-        $this->email->to('csamayoa@zenstudiogt.com');
+        $this->email->to($user->email);
+        $this->email->cc('gppredio@gpautos.net');
+        $this->email->bcc('csamayoa@zenstudiogt.com');
+        //$this->email->to('csamayoa@zenstudiogt.com');
 
-        $this->email->subject('Vehiculo publicado:');
+        $this->email->subject('Vehiculo en revision:');
 
         //mensaje
         $message = '<html><body>';
@@ -1230,12 +1306,12 @@ class Cliente extends Base_Controller
         $message .= '<tr><td></td>';
         $message .= '<td><img src="http://gpautos.net/ui/public/images/bienvenida_logo.JPG" style="width: 400px;display: block;margin: 0 auto;"></td>';
         $message .= '<td></td></tr>';
-        $message .= '<tr><td></td>';
-        $message .= '<td><p style="color: #fff; background: #e79637; padding: 20px;">EN BREVE TU ANUNCIO ESTARA ACTIVO</p></td>';
-        $message .= '<td><p>Recuerda que si deseas modificar tu anuncio lo puedes hacer desde tu perfil en <a href="http://gpautos.net">gpautos.net.</a></p></td>';
-        $message .= '<td><p>La duración de tu anuncio es de 30 dias</p></td>';
-        $message .= '<td><p>Al finalizar el timpo podras renovar tu anuncio con un solo click</p></td>';
-        $message .= '<td></td></tr>';
+        $message .= '<tr><td colspan="3"><p style="color: #fff; background: #e79637; padding: 20px;">EN BREVE TU ANUNCIO</p>';
+        $message .= '<p>'.$carro->id_marca.' | '.$carro->id_linea.' | '.$carro->crr_modelo.'</p>';
+        $message .= '<p style="color: #fff; background: #e79637; padding: 20px;">ESTARA ACTIVO</p></td></tr>';
+        $message .= '<tr><td colspan="3"><p>Recuerda que si deseas modificar tu anuncio lo puedes hacer desde tu perfil en <a href="http://gpautos.net">gpautos.net.</a></p>';
+        $message .= '<p>La duración de tu anuncio es de 30 dias</p>';
+        $message .= '<p>Al finalizar el timpo podras renovar tu anuncio con un solo click</p> </tr>';
         $message .= '<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>';
         $message .= '<tr><td colspan="3">Atentamente.</td></tr>';
         $message .= '<tr><td colspan="3"><p>';
@@ -1250,7 +1326,7 @@ class Cliente extends Base_Controller
         $this->email->send();
 
 
-        echo 'send';
+        redirect('cliente/perfil');
 
     }
 

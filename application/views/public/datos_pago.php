@@ -208,6 +208,9 @@ $telefono = array(
                         <?php if ($forma_pago == 'pago_efectivo') { ?>
                         <form id="Metodo_pago" method="post" action="<?php echo base_url() ?>cliente/guarda_pago_efectivo">
                         <?php } ?>
+                        <?php if ($forma_pago == 'pago_gratuito') { ?>
+                        <form id="Metodo_pago" method="post" action="<?php echo base_url() ?>cliente/guarda_pago_gratuito">
+                        <?php } ?>
 
 
                             <div class="card-content">

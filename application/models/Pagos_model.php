@@ -43,6 +43,23 @@ class Pagos_model extends CI_Model
         );
         $this->db->insert('pago_anuncio', $datos_pago_efectivo);
     }
+    function guardar_pago_gratuito($data){
+        //fecha
+        $fecha = New DateTime();
+        $datos_pago_efectivo= array(
+            'fecha'=>$fecha->format('Y-m-d'),
+            'user_id'=>$data['user_id'],
+            'metodo'=>'gratuito',
+            'direccion'=>$data['direccion'],
+            'telefono'=>$data['telefono'],
+            'monto'=>$data['monto'],
+            'nombre_factura'=>$data['nombre_factura'],
+            'nit'=>$data['nit'],
+            'direccion_factura'=>$data['direccion_factura'],
+        );
+        $this->db->insert('pago_anuncio', $datos_pago_efectivo);
+    }
+
     function guardar_pago_deposito($data){
         //fecha
         $fecha = New DateTime();
