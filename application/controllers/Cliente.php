@@ -720,7 +720,7 @@ class Cliente extends Base_Controller
         $this->email->from('info@gpautos.net', 'GP AUTOS');
         $this->email->to($correo);
         // $this->email->cc($correo);
-        $this->email->cc('pagos@gpautos.net, anuncios2@gpautos.net');
+        $this->email->cc('sv@gpautos.net, anuncios2@gpautos.net');
         $this->email->bcc('csamayoa@zenstudiogt.com');
 
         $this->email->subject('Se registro un pago');
@@ -990,7 +990,7 @@ class Cliente extends Base_Controller
         );
         $this->email->initialize($configGmail);
         $this->email->from('info@gpautos.net', 'GP AUTOS');
-        //$this->email->to($email_contacto);
+        $this->email->to($email_contacto);
         $this->email->bcc('csamayoa@zenstudiogt.com');
         $this->email->subject('Anuncio pendiente de aprobación');
 
@@ -1292,7 +1292,7 @@ class Cliente extends Base_Controller
 
         $this->email->from('info@gpautos.net', 'GP AUTOS');
         $this->email->to($user->email);
-        $this->email->cc('gppredio@gpautos.net');
+        $this->email->cc('sv@gpautos.net');
         $this->email->bcc('csamayoa@zenstudiogt.com');
         //$this->email->to('csamayoa@zenstudiogt.com');
 

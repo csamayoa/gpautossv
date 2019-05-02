@@ -29,7 +29,7 @@
     <tr>
         <td colspan="3">
             <p style="width: 60%; margin: 0 auto; background: #e79637; color: #fff; padding: 10px; text-align: center">
-                <span>Tu anuncio ha sido aprovado</span>
+                <span>Tu anuncio ha sido aprobado</span>
             </p>
             <ul>
                 <li>Recuerda que si deseas editar tu anuncio puedes ingresar en sv.gpautos.net e ingresar a tu cuenta.</li>

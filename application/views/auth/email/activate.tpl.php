@@ -24,7 +24,7 @@
     </tr>
     <tr>
         <td colspan="3">
-            <a style="text-transform: uppercase; text-align:center; color: #fff; padding: 10px; display: block; width: 100%; background:#e79637;" href="<?php echo 'auth/activate/'. $id .'/'. $activation?>">haz click aqui para activar tu cuenta</a>
+            <a style="text-transform: uppercase; text-align:center; color: #fff; padding: 10px; display: block; width: 100%; background:#e79637;" href="<?php echo base_url().'auth/activate/'. $id .'/'. $activation?>">haz click aqui para activar tu cuenta</a>
 
             <p><strong>para confirmar que el correo es correcto.</strong>
             y así habilitar tu cuenta, recibir promociones y beneficios que solo GPAUTOS.NET te puede dar.

@@ -35,6 +35,7 @@ $ci =& get_instance();
             <hr>
             <div class="row-fluid">
                 <div class="span12">
+                    <a class="btn btn-success" href="<?php echo base_url()?>/admin/nuevo_predio">Nuevo</a>
                     <?php if ($predios){ ?>
 
                         <div class="widget-box">
@@ -42,7 +43,7 @@ $ci =& get_instance();
                                 <h5>Listado de predios</h5>
                             </div>
                             <div class="widget-content nopadding">
-                                <a class="btn btn-success" href="<?php echo base_url()?>/admin/nuevo_predio">Nuevo</a>
+
                                 <table class="table table-bordered data-table">
                                     <thead>
                                     <tr>

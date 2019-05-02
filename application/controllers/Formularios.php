@@ -65,7 +65,7 @@ class Formularios extends Base_Controller
 
             //mensaje
             $message = '<html><body>';
-            $message .= '<img src="http://gp.carrosapagos.com/ui/public/images/logoGp.png" alt="GP AUTOS" />';
+            $message .= '<img src="http://sv.gpautos.net/ui/public/images/logoGp.png" alt="GP AUTOS" />';
             $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
             $message .= "<tr style='background: #eee;'><td><strong>nombre:</strong> </td><td>" . strip_tags($nombre) . "</td></tr>";
             $message .= "<tr><td><strong>Email:</strong> </td><td>" . strip_tags($correo) . "</td></tr>";
@@ -463,20 +463,15 @@ class Formularios extends Base_Controller
             $message .= "<tr><td><strong>Terminos:</strong> </td><td>" . strip_tags($terminos) . "</td></tr>";
             $message .= "</table>";
             $message .= "</body></html>";
-
-
             $this->email->message($message);
-
             //enviar correo
             $this->email->send();
 
             // echo'send';
-
             $this->email->from('creditos@gpautos.net', 'GP AUTOS - Precalificación');
             $this->email->to($correo);
             //$this->email->bcc('csamayoa@zenstudiogt.com');
             $this->email->subject('Gracias por precalificarte por medio de GPautos');
-
             //mensaje
             $message = '<html><body>';
             $message .= '<h1>Gracias por precalificarte por medio de GPautos</h1>';

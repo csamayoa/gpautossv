@@ -174,7 +174,7 @@ $precio = array(
     'id' => 'precio',
     'class' => 'validate',
     'placeholder' => 'Precio',
-    'min' => '10000',
+    'min' => '1000',
     //'value'       => $carro->crr_precio,
     'required' => 'required'
 );
