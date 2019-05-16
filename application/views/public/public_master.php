@@ -7,11 +7,8 @@
  */ ?>
 <?php
 $CI =& get_instance();
-
 $datos_buscador = $CI->session->userdata('filtros_buscador');
-
 //echo 'data buscador session'.$datos_buscador;
-
 if ($datos_buscador == '') {
     $datos_buscador = array(
         'predio' => 'TODOS',
@@ -93,7 +90,6 @@ if ($marca) {
         $marca_carro_select_options[$marca_carro->id_marca] = $marca_carro->id_marca;
     }
 }
-
 //LINEA
 $linea_carro_select = array(
     'name' => 'linea_carro',
@@ -108,7 +104,6 @@ if ($linea) {
         $linea_carro_select_options[$linea_carro->id_linea] = $linea_carro->id_linea;
     }
 }
-
 //TRANSMISION
 $transmision_carro_select = array(
     'name' => 'transmision_carro',
@@ -253,14 +248,11 @@ $t4x4_n = array(
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col s12 m4 col-md-4">
                 <a href="<?php echo base_url(); ?>">
                     <img src="<?php echo base_url(); ?>ui/public/images/logoGp.png" id="logo_img">
                 </a>
-
-
                 <div class="collection">
                     <a href="<?php echo base_url() ?>cliente/login" class="collection-item black-text">
                         Anuncia tu vehiculo <i class="material-icons  secondary-content orange-text darken-3">note_add</i>
@@ -360,7 +352,6 @@ $t4x4_n = array(
         </div>
     </div>
 </section>
-
 <?php if ($this->section('home_banner')) {
     echo $this->section('home_banner');
 } ?>
@@ -373,7 +364,6 @@ $t4x4_n = array(
     <div id="floating_menu" class="orange darken-3">
         <a href="#" data-activates="slide-out" class="button-collapse white-text ">Buscar <i
                     class="material-icons dp48">search</i></a>
-
     </div>
     <ul id="slide-out" class="side-nav">
         <li>
@@ -490,9 +480,6 @@ $t4x4_n = array(
                                         </p>
                                     </div>
                                 </div>
-
-
-
                             </div>
                         </li>
                         <li>
@@ -563,14 +550,11 @@ $t4x4_n = array(
         </li>
     </ul>
 </div>
-
-
 <?php if ($this->section('buscador')) {
     echo $this->section('buscador');
 } ?>
 <!-- page content -->
 <?php echo $this->section('page_content') ?>
-
 <!-- footer content -->
 <footer class="page-footer orange darken-1">
     <div class="container">
@@ -602,8 +586,6 @@ $t4x4_n = array(
         </div>
     </div>
 </footer>
-
-
 <!-- jQuery  -->
 <script type="text/javascript" src="<?php echo base_url(); ?>ui/public/js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>ui/public/js/bootstrap.min.js"></script>
@@ -648,27 +630,22 @@ $t4x4_n = array(
     var filtro_moneda;
     var filtro_precio;
     var filtro_modelo;
-
     //precio carro
     var precioCarroSlider;
     var precio_carro;
     var precio_carro_max;
     var precio_carro_min;
-
     //Año carro
     var aCarroSlider;
     var a_carro;
     var a_carro_min;
     var a_carro_max;
-
-
     //cambiar valor de inpusts precio y año
     function setSliderCarroPrecio(i, value) {
         var r = [null, null];
         r[i] = value;
         precioCarroSlider.noUiSlider.set(r);
     }
-
     //Precio carro
     precioCarroSlider = document.getElementById('p_carro');
     noUiSlider.create(precioCarroSlider, {
@@ -919,21 +896,13 @@ $t4x4_n = array(
         }
     });
 </script>
-
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-103355785-10"></script>
 <script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-103355785-4', 'auto');
-    ga('send', 'pageview');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-103355785-10');
 </script>
 
 <!-- BEGIN JIVOSITE CODE {literal} --
@@ -987,13 +956,10 @@ $t4x4_n = array(
     <meta name="msapplication-TileColor" content="#fb8c00">
     <meta name="msapplication-TileImage" content="/ui/public/images/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#fb8c00">
-
     <?php if ($this->section('title')) {
         echo $this->section('title');
     } ?>
-
     <?php echo $this->section('meta'); ?>
-
     <!-- Materialize -->
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -1009,8 +975,5 @@ $t4x4_n = array(
     <?php echo $this->section('css_p'); ?>
     <link href="<?php echo base_url() ?>ui/public/css/style.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>ui/public/css/responsive.css" rel="stylesheet">
-
 </head>
 </html>
-
-
