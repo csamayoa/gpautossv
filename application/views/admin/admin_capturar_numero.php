@@ -17,7 +17,6 @@
 $parametro_numeros = $parametro_numeros->row();
 $numeros_diarios_requeridos = $parametro_numeros->parametro_valor;
 
-
 //Codigo
 $codigo = array(
     'type' => 'text',
@@ -29,7 +28,6 @@ $codigo = array(
     //'disabled'    => 'disabled'
 );
 
-
 //UBICACION
 $ubicacion_carro_select         = array(
     'name'     => 'ubicacion_carro',
@@ -38,30 +36,21 @@ $ubicacion_carro_select         = array(
     'required' => 'required'
 );
 $ubicacion_carro_select_options = array(
-    "ALTA VERAPAZ"   => "ALTA VERAPAZ",
-    "BAJA VERAPAZ"   => "BAJA VERAPAZ",
-    "CHIMALTENANGO"  => "CHIMALTENANGO",
-    "CHIQUIMULA"     => "CHIQUIMULA",
-    "EL PROGRESO"    => "EL PROGRESO",
-    "ESCUINTLA"      => "ESCUINTLA",
-    "GUATEMALA"      => "GUATEMALA",
-    "HUEHUETENANGO"  => "HUEHUETENANGO",
-    "IZABAL"         => "IZABAL",
-    "JALAPA"         => "JALAPA",
-    "JUTIAPA"        => "JUTIAPA",
-    "PETÉN"          => "PETÉN",
-    "QUETZALTENANGO" => "QUETZALTENANGO",
-    "QUICHÉ"         => "QUICHÉ",
-    "RETALHULEU"     => "RETALHULEU",
-    "SACATEPÉQUEZ"   => "SACATEPÉQUEZ",
-    "SAN MARCOS"     => "SAN MARCOS",
-    "SANTA ROSA"     => "SANTA ROSA",
-    "SOLOLÁ"         => "SOLOLÁ",
-    "SUCHITEPÉQUEZ"  => "SUCHITEPÉQUEZ",
-    "TOTONICAPÁN"    => "TOTONICAPÁN",
-    "ZACAPA"         => "ZACAPA"
+    "SAN SALVADOR" => "SAN SALVADOR",
+    "LA LIBERTAD" => "LA LIBERTAD",
+    "SANTA ANA" => "SANTA ANA",
+    "SONSONATE" => "SONSONATE",
+    "SAN MIGUEL" => "SAN MIGUEL",
+    "USULUTÁN" => "USULUTÁN",
+    "AHUACHAPÁN" => "AHUACHAPÁN",
+    "LA PAZ" => "LA PAZ",
+    "LA UNIÓN" => "LA UNIÓN",
+    "CUSCATLÁN" => "CUSCATLÁN",
+    "CHALATENANGO" => "CHALATENANGO",
+    "MORAZÁN" => "MORAZÁN",
+    "SAN VICENTE" => "SAN VICENTE",
+    "CABAÑAS" => "CABAÑAS",
 );
-
 //telefono
 $telefono = array(
     'type' => 'tel',
@@ -72,7 +61,6 @@ $telefono = array(
     'required' => 'required'
     //'disabled'    => 'disabled'
 );
-
 //TIPO
 $tipo_carro_select         = array(
     'name'     => 'tipo_carro',
@@ -85,7 +73,6 @@ foreach ($tipos->result() as $tipo_carro)
 {
     $tipo_carro_select_options[$tipo_carro->id_tipo_carro] = $tipo_carro->id_tipo_carro;
 }
-
 //MARCA
 $marca = array(
     'type'        => 'text',
@@ -96,7 +83,6 @@ $marca = array(
     //'value'       => $carro->crr_modelo,
     'required'    => 'required'
 );
-
 //LINEA
 $linea = array(
     'type'        => 'text',
@@ -129,9 +115,6 @@ $modelo = array(
 <link rel="stylesheet" href="<?php echo base_url() ?>ui/admin/css/matrix-media.css"/>
 <link rel="stylesheet" href="<?php echo base_url() ?>ui/admin/css/bootstrap-wysihtml5.css"/>
 <?php $this->stop() ?>
-
-
-
 
 <?php $this->start('page_content') ?>
 <div id="content">
