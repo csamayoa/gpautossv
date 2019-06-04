@@ -411,7 +411,6 @@ $t4x4_n = array(
                                         <?php echo form_dropdown($ubicacion_carro_select, $ubicacion_carro_select_options) ?>
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class=" s12">
                                         <label for="tipo_carro">Tipo de Vehiculo</label>
