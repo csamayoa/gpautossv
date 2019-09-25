@@ -295,7 +295,7 @@ $t4x4_n = array(
                 <section id="banner">
                     <?php
                     $numero = rand ('1','9');
-                    if ($numero % 2 == 0) { ?>
+                    if (true) { ?>
                         <?php if (isset($header_banners)) { ?>
                             <div id="header_banners" class="carousel slide" data-ride="carousel">
                                 <!-- Indicators
